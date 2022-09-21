@@ -1,4 +1,4 @@
-﻿namespace TinkoffDataCollector.TinkoffDataService.Data
+﻿namespace TinkoffDataCollector.Common.Data
 {
     public enum InstrumentType
     {

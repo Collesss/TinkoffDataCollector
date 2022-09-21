@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector", "TinkoffDataCollector\TinkoffDataCollector.csproj", "{A41F7C55-3B1B-4F25-9991-782DFD632A62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector", "TinkoffDataCollector\TinkoffDataCollector.csproj", "{A41F7C55-3B1B-4F25-9991-782DFD632A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService", "TinkoffDataCollector.TinkoffDataService\TinkoffDataCollector.TinkoffDataService.csproj", "{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataService", "TinkoffDataCollector.TinkoffDataService\TinkoffDataCollector.TinkoffDataService.csproj", "{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.SaveService", "TinkoffDataCollector.SaveService\TinkoffDataCollector.SaveService.csproj", "{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.SaveService", "TinkoffDataCollector.SaveService\TinkoffDataCollector.SaveService.csproj", "{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService.Data", "TinkoffDataCollector.TinkoffDataService.Data\TinkoffDataCollector.TinkoffDataService.Data.csproj", "{93EE3383-4A23-48CE-A6FF-C66B4DC54F60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.Common.Data", "TinkoffDataCollector.Common.Data\TinkoffDataCollector.Common.Data.csproj", "{11D7156B-8CFE-410A-A0F4-FE827021F9FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.SaveService.Inplementation.SaveInExcel", "TinkoffDataCollector.SaveService.Inplementation.SaveInExcel\TinkoffDataCollector.SaveService.Inplementation.SaveInExcel.csproj", "{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.csproj", "{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient.csproj", "{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +35,22 @@ Global
 		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93EE3383-4A23-48CE-A6FF-C66B4DC54F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93EE3383-4A23-48CE-A6FF-C66B4DC54F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93EE3383-4A23-48CE-A6FF-C66B4DC54F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93EE3383-4A23-48CE-A6FF-C66B4DC54F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿using TinkoffDataCollector.TinkoffDataService.Data;
+﻿using TinkoffDataCollector.Common.Data;
 
 namespace TinkoffDataCollector.TinkoffDataService.Interfaces
 {
@@ -10,7 +10,7 @@ namespace TinkoffDataCollector.TinkoffDataService.Interfaces
         /// <exception cref="Exceptions.TinkoffDataServiceException"></exception>
         /// <param name="cancellationToken">CancellationToken</param>
         /// <returns>all market instrument</returns>
-        Task<IEnumerable<MarketInstrument>> GetAllMarketInstrument(CancellationToken cancellationToken);
+        Task<IEnumerable<MarketInstrument>> GetAllStoks(CancellationToken cancellationToken);
 
         /// <summary>
         /// return info about candle on figi stock
@@ -22,6 +22,6 @@ namespace TinkoffDataCollector.TinkoffDataService.Interfaces
         /// <param name="cancellationToken">CancellationToken</param>
         /// <exception cref="Exceptions.TinkoffDataServiceException"></exception>
         /// <returns>candle stock</returns>
-        Task<IEnumerable<CandlePayload>> MarketCandleAsync(string figi, DateTime from, DateTime to, CandleInterval interval, CancellationToken cancellationToken);
+        Task<IEnumerable<CandlePayload>> GetStockCandles(string figi, DateTime from, DateTime to, CandleInterval interval, CancellationToken cancellationToken);
     }
 }

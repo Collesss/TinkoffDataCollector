@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TinkoffDataCollector.Common.Data\TinkoffDataCollector.Common.Data.csproj" />
+    <ProjectReference Include="..\TinkoffDataCollector.TinkoffDataService\TinkoffDataCollector.TinkoffDataService.csproj" />
   </ItemGroup>
 
 </Project>

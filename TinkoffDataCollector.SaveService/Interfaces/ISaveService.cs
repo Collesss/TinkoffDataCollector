@@ -1,9 +1,9 @@
-﻿using TinkoffDataCollector.SaveService.Data;
+﻿using TinkoffDataCollector.Common.Data;
 
 namespace TinkoffDataCollector.SaveService.Interfaces
 {
     public interface ISaveService
     {
-        void Save(SaveServiceData saveServiceData);
+        Task Save(MarketInstrument stock, IEnumerable<CandlePayload> candlePayloads, CancellationToken cancellationToken);
     }
 }
