@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.Tinkof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient.csproj", "{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataCollectorService", "TinkoffDataCollector.TinkoffDataCollectorService\TinkoffDataCollector.TinkoffDataCollectorService.csproj", "{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataCollectorService", "TinkoffDataCollector.TinkoffDataCollectorService\TinkoffDataCollector.TinkoffDataCollectorService.csproj", "{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave", "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave\TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave.csproj", "{197090AD-3FFC-4996-8141-DC1588E1544A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave", "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave\TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave.csproj", "{197090AD-3FFC-4996-8141-DC1588E1544A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository.csproj", "{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{197090AD-3FFC-4996-8141-DC1588E1544A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197090AD-3FFC-4996-8141-DC1588E1544A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{197090AD-3FFC-4996-8141-DC1588E1544A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
