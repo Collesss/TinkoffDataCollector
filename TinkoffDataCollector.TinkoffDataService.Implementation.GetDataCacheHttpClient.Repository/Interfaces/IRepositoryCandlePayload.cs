@@ -4,6 +4,6 @@ namespace TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHtt
 {
     public interface IRepositoryCandlePayload : IRepository<CandlePayload, string>
     {
-
+        Task<IEnumerable<CandlePayload>> GetCandlesStock(string figi, DateTime from, DateTime to);
     }
 }
