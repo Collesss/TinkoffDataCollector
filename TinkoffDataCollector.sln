@@ -5,23 +5,25 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector", "TinkoffDataCollector\TinkoffDataCollector.csproj", "{A41F7C55-3B1B-4F25-9991-782DFD632A62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataService", "TinkoffDataCollector.TinkoffDataService\TinkoffDataCollector.TinkoffDataService.csproj", "{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Data", "Common.Data\Common.Data.csproj", "{AD472DF4-33A0-4E4F-8CB0-125CCD517E87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.SaveService", "TinkoffDataCollector.SaveService\TinkoffDataCollector.SaveService.csproj", "{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveService", "SaveService\SaveService.csproj", "{838838B3-5E65-445E-B7C3-1A226EBD4F23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.Common.Data", "TinkoffDataCollector.Common.Data\TinkoffDataCollector.Common.Data.csproj", "{11D7156B-8CFE-410A-A0F4-FE827021F9FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveService.SaveInExcel", "SaveService.SaveInExcel\SaveService.SaveInExcel.csproj", "{17B804D0-7B37-4D92-8F24-3E6D5CA9367E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.SaveService.Inplementation.SaveInExcel", "TinkoffDataCollector.SaveService.Inplementation.SaveInExcel\TinkoffDataCollector.SaveService.Inplementation.SaveInExcel.csproj", "{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollectorService", "TinkoffDataCollectorService\TinkoffDataCollectorService.csproj", "{E157444B-127F-4E16-AC03-B403AF6B6DBD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.csproj", "{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollectorService.BaseSave", "TinkoffDataCollectorService.BaseSave\TinkoffDataCollectorService.BaseSave.csproj", "{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient.csproj", "{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService", "DataService\DataService.csproj", "{7817E015-F75D-47CF-8DB4-260220FCB0A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataCollectorService", "TinkoffDataCollector.TinkoffDataCollectorService\TinkoffDataCollector.TinkoffDataCollectorService.csproj", "{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient", "DataService.GetDataCacheHttpClient\DataService.GetDataCacheHttpClient.csproj", "{35FCB3AC-30C6-45A0-9281-58F7640D3984}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave", "TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave\TinkoffDataCollector.TinkoffDataCollectorService.Implementation.BaseSave.csproj", "{197090AD-3FFC-4996-8141-DC1588E1544A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.Repository", "DataService.GetDataCacheHttpClient.Repository\DataService.GetDataCacheHttpClient.Repository.csproj", "{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository", "TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.Repository.csproj", "{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClient", "DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClient.csproj", "{5362956E-0E8A-475E-A31D-59A8D6DD466B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService.GetDataCacheHttpClient.Repository.RepositoryDb", "DataService.GetDataCacheHttpClient.Repository.RepositoryDb\DataService.GetDataCacheHttpClient.Repository.RepositoryDb.csproj", "{96815A6A-95FD-4ADF-9951-7D3F25579432}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,42 +35,46 @@ Global
 		{A41F7C55-3B1B-4F25-9991-782DFD632A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A41F7C55-3B1B-4F25-9991-782DFD632A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A41F7C55-3B1B-4F25-9991-782DFD632A62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BC8BE50-2B6B-47C1-869C-D6E2EFE86B7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{875D93AE-7CAD-4A26-B6E4-E7E42BA05966}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11D7156B-8CFE-410A-A0F4-FE827021F9FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA43D8FA-DBE1-47E3-B969-9DAC3FF5C5FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B5A38BE-8F09-4FD4-8863-7DA442E7DB82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D925ADA0-7B1D-478D-A88E-261BAE6E9E96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21C2EA1D-2F24-4E6D-9E8D-874FE20C5C18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{197090AD-3FFC-4996-8141-DC1588E1544A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{197090AD-3FFC-4996-8141-DC1588E1544A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{197090AD-3FFC-4996-8141-DC1588E1544A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{197090AD-3FFC-4996-8141-DC1588E1544A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0532B6FC-B9B3-4C28-80FC-C26D8D57749C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD472DF4-33A0-4E4F-8CB0-125CCD517E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD472DF4-33A0-4E4F-8CB0-125CCD517E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD472DF4-33A0-4E4F-8CB0-125CCD517E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD472DF4-33A0-4E4F-8CB0-125CCD517E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838838B3-5E65-445E-B7C3-1A226EBD4F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838838B3-5E65-445E-B7C3-1A226EBD4F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838838B3-5E65-445E-B7C3-1A226EBD4F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838838B3-5E65-445E-B7C3-1A226EBD4F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B804D0-7B37-4D92-8F24-3E6D5CA9367E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B804D0-7B37-4D92-8F24-3E6D5CA9367E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B804D0-7B37-4D92-8F24-3E6D5CA9367E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B804D0-7B37-4D92-8F24-3E6D5CA9367E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FCB3AC-30C6-45A0-9281-58F7640D3984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FCB3AC-30C6-45A0-9281-58F7640D3984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FCB3AC-30C6-45A0-9281-58F7640D3984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FCB3AC-30C6-45A0-9281-58F7640D3984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

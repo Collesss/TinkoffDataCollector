@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using TinkoffDataCollector.TinkoffDataCollectorService.Exceptions;
-using TinkoffDataCollector.TinkoffDataCollectorService.Interfaces;
+using TinkoffDataCollectorService.Exceptions;
+using TinkoffDataCollectorService.Interfaces;
 
 namespace TinkoffDataCollector
 {

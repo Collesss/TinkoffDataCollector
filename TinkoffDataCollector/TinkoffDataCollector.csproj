@@ -18,11 +18,4 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TinkoffDataCollector.SaveService\TinkoffDataCollector.SaveService.csproj" />
-    <ProjectReference Include="..\TinkoffDataCollector.TinkoffDataCollectorService\TinkoffDataCollector.TinkoffDataCollectorService.csproj" />
-    <ProjectReference Include="..\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient\TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient.TinkoffHttpClient.csproj" />
-    <ProjectReference Include="..\TinkoffDataCollector.TinkoffDataService\TinkoffDataCollector.TinkoffDataService.csproj" />
-  </ItemGroup>
-
 </Project>
