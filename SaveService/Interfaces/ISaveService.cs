@@ -1,9 +1,9 @@
-﻿using Common.Data;
+﻿using SaveService.Data;
 
 namespace SaveService.Interfaces
 {
     public interface ISaveService
     {
-        Task Save(MarketInstrument stock, IEnumerable<CandlePayload> candlePayloads, CancellationToken cancellationToken);
+        Task Save(SaveData saveData, CancellationToken cancellationToken);
     }
 }
