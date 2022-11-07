@@ -11,7 +11,7 @@ namespace TinkoffDataCollector
         private static IServiceProvider ServiceProvider { get; set; }
         private static IConfiguration Configuration { get; set; }
 
-        static async void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Init(args);
 
@@ -24,13 +24,28 @@ namespace TinkoffDataCollector
             ITinkoffDataCollectorService tinkoffDataCollectorService = scopeServiceProvider.GetRequiredService<ITinkoffDataCollectorService>();
             ILogger<Program> logger = scopeServiceProvider.GetRequiredService<ILogger<Program>>();
 
+            //Console.CancelKeyPress += (e, sender) => cts.Cancel();
+
             try
             {
+                //Console.WriteLine("test1");
+                //await Task.Delay(2500, cancellationToken);
+                //Console.WriteLine("test2");
                 await tinkoffDataCollectorService.Run(cancellationToken);
             }
             catch (TinkoffDataCollectorServiceException e)
             {
-                logger.LogError(e, e.Message);
+                switch (e.InnerException)
+                {
+                    case OperationCanceledException:
+                        //Console.WriteLine("Canceled.");
+                        logger.LogWarning("The operation was canceled.");
+                        break;
+                    default:
+                        //Console.WriteLine("Error");
+                        logger.LogError(e, e.Message);
+                        break;
+                }
             }
         }
     }

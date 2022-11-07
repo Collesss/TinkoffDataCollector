@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common.Data\Common.Data.csproj" />
+    <ProjectReference Include="..\DataService\DataService.csproj" />
     <ProjectReference Include="..\SaveService\SaveService.csproj" />
     <ProjectReference Include="..\TinkoffDataCollectorService\TinkoffDataCollectorService.csproj" />
   </ItemGroup>
