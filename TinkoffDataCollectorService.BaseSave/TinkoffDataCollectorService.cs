@@ -4,11 +4,13 @@ using DataService.Interfaces;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SaveService.Data;
 using SaveService.Exceptions;
 using SaveService.Interfaces;
 using TinkoffDataCollectorService.BaseSave.Options;
 using TinkoffDataCollectorService.Exceptions;
 using TinkoffDataCollectorService.Interfaces;
+using CandlePayload = Common.Data.CandlePayload;
 
 namespace TinkoffDataCollectorService.BaseSave
 {
@@ -51,7 +53,7 @@ namespace TinkoffDataCollectorService.BaseSave
 
                     try
                     {
-                        await _saveService.Save(stock, candles, cancellationToken);
+                        //await _saveService.Save(new SaveData(stock.Name, candles), cancellationToken);
                     }
                     catch (SaveServiceException e)
                     {

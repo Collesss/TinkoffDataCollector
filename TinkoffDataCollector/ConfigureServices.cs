@@ -21,7 +21,6 @@ namespace TinkoffDataCollector
                     client.DefaultRequestVersion = new Version(1, 1);
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", options.Value.Token);
                 });
-                
         }
     }
 }
