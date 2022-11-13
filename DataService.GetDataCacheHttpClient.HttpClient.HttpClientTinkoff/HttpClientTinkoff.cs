@@ -1,16 +1,17 @@
-﻿using Common.Data;
+﻿using DataService.GetDataCacheHttpClient.HttpClient.Extensions;
+using DataService.GetDataCacheHttpClient.HttpClient.Data;
 using DataService.GetDataCacheHttpClient.HttpClient.Exceptions;
 using DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff.Options;
 using DataService.GetDataCacheHttpClient.HttpClient.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Web;
 
 namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff
 {
-    public class HttpClientTinkoff : IHttpClient
+    public class HttpClientTinkoff : IHttpClientTinkoff
     {
         private readonly ILogger<HttpClientTinkoff> _logger;
         private readonly System.Net.Http.HttpClient _httpClient;
@@ -24,7 +25,7 @@ namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff
             _options = options ?? throw new ArgumentNullException(nameof(options));
         }
 
-        public async Task<IEnumerable<MarketInstrument>> GetStoks(CancellationToken cancellationToken)
+        public async Task<MarketInstrumentList> GetStoks(CancellationToken cancellationToken = default)
         {
             HttpResponseMessage response = null;
 
@@ -34,7 +35,7 @@ namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff
 
                 response.EnsureSuccessStatusCode();
 
-                return await response.Content.ReadFromJsonAsync<IEnumerable<MarketInstrument>>
+                return await response.Content.ReadFromJsonAsync<MarketInstrumentList>
                     (new JsonSerializerOptions(JsonSerializerDefaults.Web), cancellationToken);
             }
             catch(Exception e)
@@ -43,18 +44,22 @@ namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff
             }
         }
 
-        public async Task<IEnumerable<CandlePayload>> GetCandles(string figi, DateTime from, DateTime to, CancellationToken cancellationToken)
+        public async Task<CandleList> GetCandles(string figi, DateTime from, DateTime to, CandleInterval interval, CancellationToken cancellationToken = default)
         {
             HttpResponseMessage response = null;
 
+            static string TimeFormatUrl(DateTime dateTime) =>
+                HttpUtility.UrlEncode(dateTime.ToString("O"));
+
             try
             {
-                //add full query parametrs
-                response = await _httpClient.GetAsync(_options.Value.BaseCandlesRoute, cancellationToken);
+                string url = $@"{_options.Value.BaseCandlesRoute}?figi={figi}&from={TimeFormatUrl(from)}&to={TimeFormatUrl(to)}&interval={interval.GetEnumMemberValue()}";
+                
+                response = await _httpClient.GetAsync(url, cancellationToken);
 
                 response.EnsureSuccessStatusCode();
 
-                return await response.Content.ReadFromJsonAsync<IEnumerable<CandlePayload>>
+                return await response.Content.ReadFromJsonAsync<CandleList>
                     (new JsonSerializerOptions(JsonSerializerDefaults.Web), cancellationToken);
             }
             catch (Exception e)

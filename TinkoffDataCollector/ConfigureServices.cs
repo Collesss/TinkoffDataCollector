@@ -13,7 +13,7 @@ namespace TinkoffDataCollector
         {
             serviceProvider
                 .AddSingleton(Configuration)
-                .AddHttpClient<IHttpClient, HttpClientTinkoff>((sp, client) =>
+                .AddHttpClient<IHttpClientTinkoff, HttpClientTinkoff>((sp, client) =>
                 {
                     IOptions<HttpClientTinkoffOptions> options = sp.GetRequiredService<IOptions<HttpClientTinkoffOptions>>();
 

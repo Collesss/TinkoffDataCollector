@@ -12,7 +12,7 @@ namespace TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHtt
         private readonly IRepositoryCandlePayload _repositoryCandlePayload;
         private readonly IRepositoryMarketInstrument _repositoryMarketInstrument;
         private readonly IRepositoryDataAboutAlreadyLoaded _repositoryDataAboutAlreadyLoaded;
-        private readonly IHttpClient _tinkoffHttpClient;
+        private readonly IHttpClientTinkoff _tinkoffHttpClient;
 
         public GetDataCacheHttpClient(ILogger<GetDataCacheHttpClient> logger, IRepositoryCandlePayload repositoryCandlePayload, 
             IRepositoryMarketInstrument repositoryMarketInstrument, IRepositoryDataAboutAlreadyLoaded repositoryDataAboutAlreadyLoaded)
