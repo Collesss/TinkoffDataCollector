@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj" />
-    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj" />
+    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj" />
+    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj" />
     <ProjectReference Include="..\TinkoffDataCollectorService\TinkoffDataCollectorService.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
 ﻿using Common.Data;
-using DataService.GetDataCacheHttpClient.HttpClient.Interfaces;
+using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Interfaces;
 using DataService.GetDataCacheHttpClient.Repository.Interfaces;
 using DataService.Interfaces;
 using Microsoft.Extensions.Logging;

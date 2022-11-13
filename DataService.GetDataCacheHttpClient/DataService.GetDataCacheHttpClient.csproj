@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj" />
+    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj" />
     <ProjectReference Include="..\DataService.GetDataCacheHttpClient.Repository\DataService.GetDataCacheHttpClient.Repository.csproj" />
     <ProjectReference Include="..\DataService\DataService.csproj" />
   </ItemGroup>

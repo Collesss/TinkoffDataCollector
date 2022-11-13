@@ -21,11 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.Repository", "DataService.GetDataCacheHttpClient.Repository\DataService.GetDataCacheHttpClient.Repository.csproj", "{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff", "DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj", "{5362956E-0E8A-475E-A31D-59A8D6DD466B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.Repository.RepositoryDb", "DataService.GetDataCacheHttpClient.Repository.RepositoryDb\DataService.GetDataCacheHttpClient.Repository.RepositoryDb.csproj", "{96815A6A-95FD-4ADF-9951-7D3F25579432}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase", "DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj", "{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff", "DataService.GetDataCacheHttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj", "{CD6868C3-7688-477D-BD1D-1587A5618E47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase", "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj", "{77837D56-2375-4B4E-854E-0FF0F628DC53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,18 +69,18 @@ Global
 		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5362956E-0E8A-475E-A31D-59A8D6DD466B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96815A6A-95FD-4ADF-9951-7D3F25579432}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6868C3-7688-477D-BD1D-1587A5618E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6868C3-7688-477D-BD1D-1587A5618E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6868C3-7688-477D-BD1D-1587A5618E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6868C3-7688-477D-BD1D-1587A5618E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
