@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Data
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data
 {
     [JsonConverter(typeof(JsonStringEnumMemberConverter))]
     public enum Currency

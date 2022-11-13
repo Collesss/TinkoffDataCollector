@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Data
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum InstrumentType

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClient.csproj" />
+    <ProjectReference Include="..\DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj" />
   </ItemGroup>
 
 </Project>

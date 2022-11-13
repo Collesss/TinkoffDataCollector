@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Exceptions
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Exceptions
 {
     public class HttpClientException : Exception
     {

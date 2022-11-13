@@ -1,7 +1,6 @@
-﻿using Common.Data;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Data
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data
 {
     public class MarketInstrumentList
     {

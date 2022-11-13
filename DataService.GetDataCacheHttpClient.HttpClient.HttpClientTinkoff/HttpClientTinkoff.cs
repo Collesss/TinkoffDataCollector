@@ -1,24 +1,24 @@
-﻿using DataService.GetDataCacheHttpClient.HttpClient.Extensions;
-using DataService.GetDataCacheHttpClient.HttpClient.Data;
-using DataService.GetDataCacheHttpClient.HttpClient.Exceptions;
-using DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff.Options;
-using DataService.GetDataCacheHttpClient.HttpClient.Interfaces;
+﻿using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Extensions;
+using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data;
+using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Exceptions;
+using DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.Options;
+using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Web;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase
 {
     public class HttpClientTinkoff : IHttpClientTinkoff
     {
         private readonly ILogger<HttpClientTinkoff> _logger;
-        private readonly System.Net.Http.HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
         private readonly IOptions<HttpClientTinkoffOptions> _options;
 
         public HttpClientTinkoff(ILogger<HttpClientTinkoff> logger,
-            System.Net.Http.HttpClient httpClient, IOptions<HttpClientTinkoffOptions> options)
+            HttpClient httpClient, IOptions<HttpClientTinkoffOptions> options)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));

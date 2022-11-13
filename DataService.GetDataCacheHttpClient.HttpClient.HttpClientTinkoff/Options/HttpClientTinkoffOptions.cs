@@ -1,4 +1,4 @@
-﻿namespace DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff.Options
+﻿namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.Options
 {
     public class HttpClientTinkoffOptions
     {

@@ -1,6 +1,6 @@
-﻿using DataService.GetDataCacheHttpClient.HttpClient.Data;
+﻿using DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Interfaces
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Interfaces
 {
     public interface IHttpClientTinkoff
     {

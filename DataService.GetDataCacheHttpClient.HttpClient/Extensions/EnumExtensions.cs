@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Runtime.Serialization;
 
-namespace DataService.GetDataCacheHttpClient.HttpClient.Extensions
+namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.Extensions
 {
     public static class EnumExtensions
     {

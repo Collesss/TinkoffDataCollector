@@ -21,11 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.Repository", "DataService.GetDataCacheHttpClient.Repository\DataService.GetDataCacheHttpClient.Repository.csproj", "{875AF3B4-4789-498D-80CF-DBAE03CB4AC3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClient", "DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClient.csproj", "{5362956E-0E8A-475E-A31D-59A8D6DD466B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff", "DataService.GetDataCacheHttpClient.HttpClient\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj", "{5362956E-0E8A-475E-A31D-59A8D6DD466B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.Repository.RepositoryDb", "DataService.GetDataCacheHttpClient.Repository.RepositoryDb\DataService.GetDataCacheHttpClient.Repository.RepositoryDb.csproj", "{96815A6A-95FD-4ADF-9951-7D3F25579432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff", "DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff.csproj", "{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase", "DataService.GetDataCacheHttpClient.HttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj", "{08DAE9B8-D99C-4D46-9EF7-846ABE1E9FCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
