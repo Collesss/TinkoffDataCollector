@@ -2,7 +2,6 @@
 using DataService.GetDataCacheHttpClient.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System.ComponentModel.DataAnnotations;
 
 namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Implementations
 {

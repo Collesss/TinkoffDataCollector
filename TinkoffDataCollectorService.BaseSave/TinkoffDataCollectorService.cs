@@ -1,16 +1,17 @@
-﻿using Common.Data;
+﻿using AutoMapper;
 using DataService.Exceptions;
 using DataService.Interfaces;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SaveService.Data;
 using SaveService.Exceptions;
 using SaveService.Interfaces;
 using TinkoffDataCollectorService.BaseSave.Options;
 using TinkoffDataCollectorService.Exceptions;
 using TinkoffDataCollectorService.Interfaces;
-using CandlePayload = Common.Data.CandlePayload;
+using CandlePayloadDataService = DataService.Data.CandlePayload;
+using CandleIntervalDataService = DataService.Data.CandleInterval;
+using CandlePayloadSaveService = SaveService.Data.CandlePayload;
 
 namespace TinkoffDataCollectorService.BaseSave
 {
@@ -20,16 +21,18 @@ namespace TinkoffDataCollectorService.BaseSave
         private readonly ISaveService _saveService;
         private readonly ITinkoffDataService _tinkoffDataService;
         private readonly IStringLocalizer _stringLocalizer;
+        private readonly IMapper _mapper;
         private readonly IOptions<TinkoffDataCollectorServiceOptions> _options;
 
         public TinkoffDataCollectorService(ILogger<TinkoffDataCollectorService> logger, ISaveService saveService,
             ITinkoffDataService tinkoffDataService, IStringLocalizer stringLocalizer,
-            IOptions<TinkoffDataCollectorServiceOptions> options)
+            IMapper mapper, IOptions<TinkoffDataCollectorServiceOptions> options)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _saveService = saveService ?? throw new ArgumentNullException(nameof(saveService));
             _tinkoffDataService = tinkoffDataService ?? throw new ArgumentNullException(nameof(tinkoffDataService));
             _stringLocalizer = stringLocalizer ?? throw new ArgumentNullException(nameof(stringLocalizer));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _options = options ?? throw new ArgumentNullException(nameof(options));
         }
 
@@ -39,11 +42,14 @@ namespace TinkoffDataCollectorService.BaseSave
             {
                 foreach (var stock in await _tinkoffDataService.GetAllStoks(cancellationToken))
                 {
-                    IEnumerable<CandlePayload> candles;
+                    IEnumerable<CandlePayloadSaveService> candles;
 
                     try
                     {
-                        candles = await _tinkoffDataService.GetStockCandles(stock.Figi, _options.Value.From, _options.Value.To, CandleInterval.Hour, cancellationToken);
+                        
+                        candles = _mapper.Map<IEnumerable<CandlePayloadDataService>, IEnumerable<CandlePayloadSaveService>>
+                            (await _tinkoffDataService.GetStockCandles(stock.Figi, _options.Value.From, _options.Value.To, 
+                                CandleIntervalDataService.Hour, cancellationToken));
                     }
                     catch (TinkoffDataServiceException e)
                     {

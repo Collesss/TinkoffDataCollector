@@ -1,4 +1,4 @@
-﻿using Common.Data;
+﻿using DataService.Data;
 
 namespace DataService.Interfaces
 {

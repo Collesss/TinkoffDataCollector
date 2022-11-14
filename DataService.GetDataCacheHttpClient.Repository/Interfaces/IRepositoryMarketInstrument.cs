@@ -1,4 +1,4 @@
-﻿using Common.Data;
+﻿using DataService.GetDataCacheHttpClient.Repository.Data;
 
 namespace DataService.GetDataCacheHttpClient.Repository.Interfaces
 {

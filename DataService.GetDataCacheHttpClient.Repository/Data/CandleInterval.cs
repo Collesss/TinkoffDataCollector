@@ -1,4 +1,4 @@
-﻿namespace Common.Data
+﻿namespace DataService.GetDataCacheHttpClient.Repository.Data
 {
     public enum CandleInterval
     {

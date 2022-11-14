@@ -1,4 +1,4 @@
-﻿using Common.Data;
+﻿using DataService.GetDataCacheHttpClient.Repository.Data;
 using DataService.GetDataCacheHttpClient.Repository.Data.CompositeKeys;
 using DataService.GetDataCacheHttpClient.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;

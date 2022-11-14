@@ -1,4 +1,4 @@
-﻿using Common.Data;
+﻿using DataService.GetDataCacheHttpClient.Repository.Data;
 using DataService.GetDataCacheHttpClient.Repository.Data.CompositeKeys;
 
 namespace DataService.GetDataCacheHttpClient.Repository.Interfaces

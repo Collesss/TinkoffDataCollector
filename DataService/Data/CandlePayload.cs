@@ -1,4 +1,4 @@
-﻿namespace Common.Data
+﻿namespace DataService.Data
 {
     public class CandlePayload
     {

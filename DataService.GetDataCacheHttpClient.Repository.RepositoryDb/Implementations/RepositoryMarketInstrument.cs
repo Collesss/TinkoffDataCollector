@@ -1,4 +1,4 @@
-﻿using Common.Data;
+﻿using DataService.GetDataCacheHttpClient.Repository.Data;
 using DataService.GetDataCacheHttpClient.Repository.Interfaces;
 using Microsoft.Extensions.Logging;
 

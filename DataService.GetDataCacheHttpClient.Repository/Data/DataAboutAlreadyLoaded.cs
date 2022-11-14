@@ -1,6 +1,4 @@
-﻿using Common.Data;
-
-namespace DataService.GetDataCacheHttpClient.Repository.Data
+﻿namespace DataService.GetDataCacheHttpClient.Repository.Data
 {
     public class DataAboutAlreadyLoaded
     {
