@@ -8,6 +8,11 @@ using MarketInstrumentDataService = DataService.Data.MarketInstrument;
 using CandlePayloadDataService = DataService.Data.CandlePayload;
 using CandleIntervalDataService = DataService.Data.CandleInterval;
 using MarketInstrumentHttpClientTinkoff = DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data.MarketInstrument;
+using CandlePayloadHttpClientTinkoff = DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data.CandlePayload;
+using CandleIntervalHttpClientTinkof = DataService.GetDataCacheHttpClient.HttpClientTinkoff.Data.CandleInterval;
+using DataService.GetDataCacheHttpClient;
+using System.Linq;
+using System;
 
 namespace TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHttpClient
 {
@@ -54,9 +59,28 @@ namespace TinkoffDataCollector.TinkoffDataService.Implementation.GetDataCacheHtt
             return marketInstruments;
         }
 
-        public Task<IEnumerable<CandlePayloadDataService>> GetStockCandles(string figi, DateTime from, DateTime to, CandleIntervalDataService interval, CancellationToken cancellationToken)
+        public async Task<IEnumerable<CandlePayloadDataService>> GetStockCandles(string figi, DateTime from, DateTime to, CandleIntervalDataService interval, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            IEnumerable<CandlePayloadDataService> candlePayloads = null;
+
+            try
+            {
+                /*
+                TinkoffCuterRequest requests = new TinkoffCuterRequest(interval, from, to);
+
+                candlePayloads = _mapper.Map<IEnumerable<CandlePayloadHttpClientTinkoff>, IEnumerable<CandlePayloadDataService>>
+                    (requests.SelectMany(request => _tinkoffHttpClient.GetCandles(figi, request.from, request.to, 
+                    _mapper.Map<CandleIntervalDataService, CandleIntervalHttpClientTinkof>(interval)).Result.Candles));
+                */
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Error get info about candles: {e.Message}");
+
+                throw new TinkoffDataServiceException(e.Message, e);
+            }
+
+            return candlePayloads;
         }
     }
 }
