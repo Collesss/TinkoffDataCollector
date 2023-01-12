@@ -1,6 +1,4 @@
-﻿using Common.Data;
-
-namespace DataService.GetDataCacheHttpClient.Repository.Data.CompositeKeys
+﻿namespace DataService.GetDataCacheHttpClient.Repository.Data.CompositeKeys
 {
     public class CandlePayloadKey
     {

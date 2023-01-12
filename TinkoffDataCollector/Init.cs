@@ -7,9 +7,9 @@ namespace TinkoffDataCollector
     {
         static void Init(string[] args)
         {
-
+            //{Directory.GetCurrentDirectory()}
             Configuration = new ConfigurationBuilder()
-                .AddJsonFile($@"{Directory.GetCurrentDirectory()}\appsetting.json", true)
+                .AddJsonFile($@"{Directory.GetCurrentDirectory()}\appsettings.json", true)
                 .AddCommandLine(args)
                 .Build();
 

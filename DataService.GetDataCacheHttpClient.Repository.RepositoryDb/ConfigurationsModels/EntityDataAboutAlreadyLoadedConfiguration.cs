@@ -1,5 +1,4 @@
-﻿using Common.Data;
-using DataService.GetDataCacheHttpClient.Repository.Data;
+﻿using DataService.GetDataCacheHttpClient.Repository.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

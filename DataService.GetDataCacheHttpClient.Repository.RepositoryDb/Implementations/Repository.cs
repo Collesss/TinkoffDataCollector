@@ -1,18 +1,21 @@
 ﻿using DataService.GetDataCacheHttpClient.Repository.Exceptions;
 using DataService.GetDataCacheHttpClient.Repository.Interfaces;
+using DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Implementations
 {
-    public abstract class Repository<TEntity, VId, EDbConxtet> : IRepository<TEntity, VId> 
+    public abstract class Repository<TEntity, VId, EDbConxtet, EEntityEqualityComparer, KEntityKeyEqualityComparer> : IRepository<TEntity, VId> 
         where TEntity : class
         where EDbConxtet : DbContext
+        where EEntityEqualityComparer : class, IEqualityComparer<TEntity>, new()
+        where KEntityKeyEqualityComparer : class, IEqualityComparer<TEntity>, new()
     {
         protected readonly EDbConxtet _dbConxtet;
-        private readonly ILogger<Repository<TEntity, VId, EDbConxtet>> _logger;
+        private readonly ILogger<Repository<TEntity, VId, EDbConxtet, EEntityEqualityComparer, KEntityKeyEqualityComparer>> _logger;
 
-        protected Repository(EDbConxtet dbConxtet, ILogger<Repository<TEntity, VId, EDbConxtet>> logger)
+        protected Repository(EDbConxtet dbConxtet, ILogger<Repository<TEntity, VId, EDbConxtet, EEntityEqualityComparer, KEntityKeyEqualityComparer>> logger)
         {
             _dbConxtet = dbConxtet ?? throw new ArgumentNullException(nameof(dbConxtet));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -69,8 +72,8 @@ namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Implementat
             return result;
         }
 
-        public Task<List<TEntity>> GetAll(CancellationToken cancellationToken = default) =>
-            _dbConxtet.Set<TEntity>().ToListAsync(cancellationToken);
+        public async Task<IEnumerable<TEntity>> GetAll(CancellationToken cancellationToken = default) =>
+            await _dbConxtet.Set<TEntity>().ToListAsync(cancellationToken);
 
         public async Task<TEntity> GetById(VId id, CancellationToken cancellationToken = default)
         {
@@ -104,7 +107,7 @@ namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Implementat
                 result = _dbConxtet.Update(entity).Entity;
                 await _dbConxtet.SaveChangesAsync(cancellationToken);
 
-                _logger.LogInformation($"Entity added: {result}.");
+                _logger.LogInformation($"Entity updated: {result}.");
             }
             catch (Exception e)
             {
@@ -114,6 +117,28 @@ namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.Implementat
             }
 
             return result;
+        }
+
+        public async Task<IEnumerable<TEntity>> Merge(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                _logger.LogTrace($"Merge entities ${entities}.");
+
+                await _dbConxtet.Set<TEntity>().Merge(entities, new EEntityEqualityComparer(), new KEntityKeyEqualityComparer(), cancellationToken);
+
+                await _dbConxtet.SaveChangesAsync(cancellationToken);
+
+                _logger.LogInformation($"Entities merged: {entities}.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Error merge entities: {entities}.");
+
+                throw new RepositoryException($"Error merge entities: {entities}. See inner exception.", e);
+            }
+
+            return entities;
         }
     }
 }

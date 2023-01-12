@@ -35,17 +35,11 @@ namespace TinkoffDataCollector
             }
             catch (TinkoffDataCollectorServiceException e)
             {
-                switch (e.InnerException)
-                {
-                    case OperationCanceledException:
-                        //Console.WriteLine("Canceled.");
-                        logger.LogWarning("The operation was canceled.");
-                        break;
-                    default:
-                        //Console.WriteLine("Error");
-                        logger.LogError(e, e.Message);
-                        break;
-                }
+                logger.LogError(e, e.Message);
+            }
+            catch(OperationCanceledException) 
+            {
+                logger.LogWarning("The operation was canceled.");
             }
         }
     }

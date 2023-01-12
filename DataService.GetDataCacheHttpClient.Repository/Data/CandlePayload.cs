@@ -1,6 +1,6 @@
 ﻿namespace DataService.GetDataCacheHttpClient.Repository.Data
 {
-    public class CandlePayload
+    public class CandlePayload : IEquatable<CandlePayload>
     {
         public decimal Open { get; }
 
@@ -29,5 +29,23 @@
             Interval = interval;
             Figi = figi;
         }
+
+        bool IEquatable<CandlePayload>.Equals(CandlePayload other) =>
+            other != null &&
+            this.Close == other.Close &&
+            this.Open == other.Open &&
+            this.Low == other.Low &&
+            this.High == other.High &&
+            this.Volume == other.Volume &&
+            this.Time == other.Time &&
+            this.Figi == other.Figi &&
+            this.Interval == other.Interval;
+
+        public override bool Equals(object obj) =>
+            obj is CandlePayload candle &&
+            ((IEquatable<CandlePayload>)this).Equals(candle);
+
+        public override int GetHashCode() =>
+            ((int)(Close * 2 + Open * 3 + Low * 4 + High * 5 + Volume * 6) + (int)(Time.Ticks * 7) + (~(int)Interval)) * Figi.GetHashCode();
     }
 }

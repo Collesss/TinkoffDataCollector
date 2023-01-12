@@ -38,6 +38,10 @@ namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoff
                 return await response.Content.ReadFromJsonAsync<MarketInstrumentList>
                     (new JsonSerializerOptions(JsonSerializerDefaults.Web), cancellationToken);
             }
+            catch(OperationCanceledException)
+            {
+                throw;
+            }
             catch(Exception e)
             {
                 throw new HttpClientException(e.Message, response.StatusCode.ToString(), "", response.StatusCode);
@@ -61,6 +65,10 @@ namespace DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoff
 
                 return await response.Content.ReadFromJsonAsync<CandleList>
                     (new JsonSerializerOptions(JsonSerializerDefaults.Web), cancellationToken);
+            }
+            catch (OperationCanceledException)
+            {
+                throw;
             }
             catch (Exception e)
             {

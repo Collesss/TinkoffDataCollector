@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using Common.Data;
+using DataService.GetDataCacheHttpClient.Repository.Data;
 
 namespace DataService.GetDataCacheHttpClient.Repository.RepositoryDb.ConfigurationsModels
 {

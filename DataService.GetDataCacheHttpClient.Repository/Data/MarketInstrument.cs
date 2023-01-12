@@ -1,6 +1,6 @@
 ﻿namespace DataService.GetDataCacheHttpClient.Repository.Data
 {
-    public class MarketInstrument
+    public class MarketInstrument : IEquatable<MarketInstrument>
     {
         public string Figi { get; }
 
@@ -29,5 +29,23 @@
             Name = name;
             Type = type;
         }
+
+        bool IEquatable<MarketInstrument>.Equals(MarketInstrument other) =>
+            other != null &&
+            this.Figi == other.Figi &&
+            this.Ticker == other.Ticker &&
+            this.Isin == other.Isin &&
+            this.MinPriceIncrement == other.MinPriceIncrement &&
+            this.Lot == other.Lot &&
+            this.Currency == other.Currency &&
+            this.Name == other.Name &&
+            this.Type == other.Type;
+
+        public override bool Equals(object obj) =>
+            obj is MarketInstrument stock &&
+            ((IEquatable<MarketInstrument>)this).Equals(stock);
+
+        public override int GetHashCode() =>
+            (int)(MinPriceIncrement * 2) + Lot * 3 + (~(int)Currency * ~(int)Type) * Name.GetHashCode() * Figi.GetHashCode() * Ticker.GetHashCode() * Isin.GetHashCode();
     }
 }

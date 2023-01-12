@@ -5,6 +5,6 @@ namespace DataService.GetDataCacheHttpClient.Repository.Interfaces
 {
     public interface IRepositoryCandlePayload : IRepository<CandlePayload, CandlePayloadKey>
     {
-        Task<IEnumerable<CandlePayload>> GetCandlesStock(string figi, DateTime from, DateTime to, CancellationToken cancellationToken = default);
+        Task<IEnumerable<CandlePayload>> GetCandlesStock(string figi, DateTime from, DateTime to, CandleInterval interval, CancellationToken cancellationToken = default);
     }
 }
