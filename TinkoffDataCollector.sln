@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveService.SaveInExcel", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollectorService", "TinkoffDataCollectorService\TinkoffDataCollectorService.csproj", "{E157444B-127F-4E16-AC03-B403AF6B6DBD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollectorService.BaseSave", "TinkoffDataCollectorService.BaseSave\TinkoffDataCollectorService.BaseSave.csproj", "{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService", "DataService\DataService.csproj", "{7817E015-F75D-47CF-8DB4-260220FCB0A6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient", "DataService.GetDataCacheHttpClient\DataService.GetDataCacheHttpClient.csproj", "{35FCB3AC-30C6-45A0-9281-58F7640D3984}"
@@ -24,6 +22,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff", "DataService.GetDataCacheHttpClient.HttpClientTinkoff\DataService.GetDataCacheHttpClient.HttpClientTinkoff.csproj", "{CD6868C3-7688-477D-BD1D-1587A5618E47}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase", "DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase\DataService.GetDataCacheHttpClient.HttpClientTinkoff.HttpClientTinkoffBase.csproj", "{77837D56-2375-4B4E-854E-0FF0F628DC53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkoffDataCollectorService.BaseSaveOnCacheData", "TinkoffDataCollectorService.BaseSaveOnCacheData\TinkoffDataCollectorService.BaseSaveOnCacheData.csproj", "{86A376DF-B8D2-497A-A1AB-F45BAFBEDD73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E157444B-127F-4E16-AC03-B403AF6B6DBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A761B7B7-D86F-4D3E-B27F-8F0F0BDB9625}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7817E015-F75D-47CF-8DB4-260220FCB0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +71,10 @@ Global
 		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77837D56-2375-4B4E-854E-0FF0F628DC53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A376DF-B8D2-497A-A1AB-F45BAFBEDD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A376DF-B8D2-497A-A1AB-F45BAFBEDD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A376DF-B8D2-497A-A1AB-F45BAFBEDD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A376DF-B8D2-497A-A1AB-F45BAFBEDD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,6 @@
     <ProjectReference Include="..\DataService\DataService.csproj" />
     <ProjectReference Include="..\SaveService.SaveInExcel\SaveService.SaveInExcel.csproj" />
     <ProjectReference Include="..\SaveService\SaveService.csproj" />
-    <ProjectReference Include="..\TinkoffDataCollectorService.BaseSave\TinkoffDataCollectorService.BaseSave.csproj" />
     <ProjectReference Include="..\TinkoffDataCollectorService\TinkoffDataCollectorService.csproj" />
   </ItemGroup>
 
